@@ -2,32 +2,37 @@
 # define CYLINDER_CPP
 
 # include "Cylinder.h"
-
+# include<iostream>
+# include<iomanip>
+using namespace std;
+const double pi = 3.14159265358979323846264338327950288419716939937510;
 double Cylinder :: SurfaceArea(){
-    
-    return ;
+    double n = 2*pi*radius*height + 2*pi*radius*radius;
+    return n;
 }
 
 double Cylinder :: Volume(){
-
-    return 0;
+    double n = pi*radius*radius*height;
+    return n;
 }
 
 double Cylinder :: Circumference(){
-
-    return ;
+    double n = 2*pi*radius;
+    return n;
 }
 
 istream & operator>>(istream & in, Cylinder & cldr)
 {
-
-    return ;
+    in >> cldr.radius >> cldr.height;
+    return in;
 }
 
 ostream & operator<<(ostream & out, Cylinder & cldr)
 {
-    
-    return ;
+    out << "Circumference: " << fixed << setprecision(3) << cldr.Circumference() << endl;
+    out << "SurfaceArea: " << fixed << setprecision(3) <<  cldr.SurfaceArea() << endl;
+    out << "Volume: " << fixed << setprecision(3) <<  cldr.Volume() << endl;
+    return out;
 }
 
 # endif

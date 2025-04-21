@@ -5,7 +5,7 @@
 # include<iostream>
 # include<iomanip>
 using namespace std;
-const double pi = 3.14159265358979323846264338327950288419716939937510;
+const double pi = 3.1415926535897932384626433832795028841971693993751;
 double Cylinder :: SurfaceArea(){
     double n = 2*pi*radius*height + 2*pi*radius*radius;
     return n;
